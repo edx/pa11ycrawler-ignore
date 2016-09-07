@@ -1,0 +1,18 @@
+# pa11ycrawler ignore rules
+#
+# In YAML, you can use a "folded style" to break up a long string
+# over multiple lines, without inserting newlines in your string.
+# You can do this by starting your string with a ">" character,
+# and then indenting your string on the next line. By default,
+# this will cause your string to end with a newline character -- to strip that
+# off, add a "-" after the ">". This is called the "block chomping indicator".
+#
+# Folded style: http://www.yaml.org/spec/1.2/spec.html#id2796251
+# Block chomping indicator: http://www.yaml.org/spec/1.2/spec.html#id2794534
+
+"*":  # These ignore rules will apply to EVERY PAGE that pa11ycrawler crawls.
+  - message: >-
+      Check that the link text combined with programmatically determined
+      link context identifies the purpose of the link.
+    context: <a * href="#main">Skip to main content</a>
+    type: notice
