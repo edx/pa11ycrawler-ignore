@@ -16,3 +16,5 @@
       link context identifies the purpose of the link.
     context: <a * href="#main">Skip to main content</a>
     type: notice
+  # Django Debug Toolbar
+  - context: class="djDebugClose"
