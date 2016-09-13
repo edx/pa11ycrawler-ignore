@@ -17,4 +17,4 @@
     context: <a * href="#main">Skip to main content</a>
     type: notice
   # Django Debug Toolbar
-  - context: class="djDebugClose"
+  - context: '*class="djDebugClose"*'
