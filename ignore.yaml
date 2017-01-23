@@ -18,3 +18,10 @@
     type: notice
   # Django Debug Toolbar
   - context: '*class="djDebugClose"*'
+  # Language Selector
+  - context: '*class="settings-language-form"*'
+  # Logo h1 is not actually empty (it contains an img with alt text)
+  - message: >-
+      Heading tag found with no content. Text that is not intended as a
+      heading should not be marked up with heading tags.
+    selector: '#global-navigation > nav > h1'
