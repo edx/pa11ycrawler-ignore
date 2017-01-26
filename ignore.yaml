@@ -18,3 +18,10 @@
     type: notice
   # Django Debug Toolbar
   - context: '*class="djDebugClose"*'
+  # Logo h1 is not actually empty (it contains an img with alt text)
+  # This is technically an erroneous rule in HTML CodeSniffer, so we should
+  # remove it once we upgrade to the latest ruleset.
+  - message: >-
+      Heading tag found with no content. Text that is not intended as a
+      heading should not be marked up with heading tags.
+    selector: '#global-navigation > nav > h1'
